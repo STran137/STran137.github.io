@@ -424,10 +424,10 @@ input, select, textarea {
 	}
 
 		body:before {
-			-moz-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
-			-webkit-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
-			-ms-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
-			animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+			-moz-animation: spinner-show 1.0s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+			-webkit-animation: spinner-show 1.0s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+			-ms-animation: spinner-show 1.0s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+			animation: spinner-show 1.0s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
 			-moz-transform-origin: 50% 50%;
 			-webkit-transform-origin: 50% 50%;
 			-ms-transform-origin: 50% 50%;
@@ -623,7 +623,9 @@ input, select, textarea {
 	.box {
 		background: #ffffff;
 		color: #39454b;
-		padding: 2em;
+        border-radius: 35px;
+        border: 2px solid #3ad7f7;
+		padding: 1.5em;
 	}
 
 		.box > :last-child {
@@ -662,16 +664,15 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: #98c593;
-		border: 0;
-		border-radius: 3.5em;
-		color: #ffffff;
+		background-color: #44EE3D;
+		border-radius: 2.5em;
+        border: 2px solid #708090;
 		cursor: pointer;
 		display: inline-block;
-		height: 3.5em;
-		line-height: 3.5em;
+		height: 2.0em;
+		line-height: 2.5em;
 		outline: 0;
-		padding: 0 2em 0 2em;
+		padding: 0 2em 2.5em 2em;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
@@ -719,7 +720,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		.button:hover,
 		button:hover {
-			background-color: #a8cea4;
+			background-color: #84FF7F;
 		}
 
 		input[type="button"]:active,
@@ -727,7 +728,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		.button:active,
 		button:active {
-			background-color: #88bc82;
+			background-color: #84FF7F;
 		}
 
 		input[type="button"].style2,
@@ -784,7 +785,7 @@ input, select, textarea {
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
 			width: calc(100% + 3em);
-			margin: -1.5em 0 2em -1.5em;
+			margin: -1.2em 0 2em -1.2em;
 		}
 
 			form > .fields > .field {
@@ -863,9 +864,9 @@ input, select, textarea {
 		width: 100%;
 		padding: 0.65em 0.75em;
 		background: none;
-		border: solid 2px #e5e6e7;
+		border: solid 2px #9c9c9c;
 		color: inherit;
-		border-radius: 0.5em;
+		border-radius: 1.25em;
 		outline: none;
 	}
 
@@ -919,10 +920,9 @@ input, select, textarea {
 	.icon {
 		text-decoration: none;
 		position: relative;
-		text-decoration: none;
 	}
 
-		.icon:before {
+		.icon:after{
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
 			display: inline-block;
@@ -930,14 +930,18 @@ input, select, textarea {
 			font-variant: normal;
 			text-rendering: auto;
 			line-height: 1;
-			text-transform: none !important;
+			text-transform: none!important;
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
 		}
 
 		.icon:before {
 			line-height: inherit;
+            color: royalblue;
 		}
+         .icon:before { 
+            text-shadow: 2px 4px 6px seashell; 
+        } 
 
 		.icon > .label {
 			display: none;
@@ -965,11 +969,13 @@ input, select, textarea {
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: url("images/overlay.png");
 		}
 
 		.image img {
 			display: block;
+     padding:2px;
+   border:3px solid #021a40;
+   background-color:whitesmoke;
 			width: 100%;
 		}
 
@@ -1234,7 +1240,7 @@ input, select, textarea {
 		-webkit-box-sizing: content-box;
 		-ms-box-sizing: content-box;
 		box-sizing: content-box;
-		background: #fff;
+		background: #ffff;
 		padding-bottom: 3em;
 		box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
 	}
@@ -1833,9 +1839,11 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		background: rgba(44, 238, 252, 0.9);
-		height: 3em;
+		height: 2.45em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+        font-size: 1.25em;
+
 	}
 
 		#header h1 {
@@ -1848,15 +1856,15 @@ input, select, textarea {
 		}
 
 			#header h1 a {
-				font-size: 1.25em;
+				font-size: 1em;
 			}
 
 		#header nav {
 			position: absolute;
 			right: 0.5em;
 			top: 0;
-			height: 3em;
-			line-height: 3em;
+			height: 1em;
+			line-height: 1em;
 		}
 
 			#header nav ul {
@@ -1957,8 +1965,8 @@ input, select, textarea {
 		}
 
 			.main.style1 h2 {
-				font-size: 4.25em;
-				line-height: 1em;
+				font-size: 4.5em;
+				line-height: 0.75em;
 			}
 
 			.main.style1 > .content {
@@ -2035,19 +2043,20 @@ input, select, textarea {
 
 		.main.style3 {
 			text-align: center;
-			padding: 6em 0 6em 0;
+			padding: 1.25em 0 1.25em 0;
 		}
 
 			.main.style3 .content > header {
-				margin-bottom: 2em;
+				margin-bottom: 0.5em;
 			}
 
 			.main.style3.primary {
-				background: #ffffff;
+                
+				background-image: url(/images/backgrounds/projectbackground.png);
 			}
 
 			.main.style3.secondary {
-				background: #f5f6f7;
+				background: #e1e1e1 ;
 			}
 
 		.main.dark {
@@ -2175,9 +2184,9 @@ input, select, textarea {
 		position: relative;
 		margin: 0;
 		line-height: 1em;
-		padding: 1.5em;
-		background: #39454b;
-		color: rgba(185, 186, 187, 0.5);
+		padding: 0.5em;
+		background: #7b7b7b;
+		color: rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 	}
 
@@ -2244,7 +2253,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
+		background: url("images/"), url("../../images/intro.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2254,7 +2263,7 @@ input, select, textarea {
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/one.jpg");
+		background: url("images/"), url("../../images/one.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2263,7 +2272,7 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
+		background: url("images/"), url("../../images/two.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2295,7 +2304,7 @@ input, select, textarea {
 			transform: translateY(100%);
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 735px) {
 
 			#contact .box {
 				padding: 1.5em 1.5em 2em 1.5em;
