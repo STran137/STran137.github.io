@@ -499,14 +499,22 @@ input, select, textarea {
 
 /* Type */
 
-	body, input, textarea, select {
+	body, select {
 		font-family: "Source Sans Pro", "sans-serif";
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
-		color: #39454b;
+		color: #21282c;
 		letter-spacing: 0.025em;
 	}
+    input, textarea {
+    	font-family: "Lucida Console", "Arial";
+		font-weight: 300;
+		font-size: 18pt;
+		line-height: 1.75em;
+		color: #21282c;
+		letter-spacing: 0.025em;
+}
 
 		@media screen and (max-width: 1920px) {
 
@@ -622,10 +630,10 @@ input, select, textarea {
 
 	.box {
 		background: #ffffff;
-		color: #39454b;
+		color: #21282c;
         border-radius: 35px;
-        border: 2px solid #3ad7f7;
-		padding: 1.5em;
+        border: 2px solid #555555;
+		padding: 1.2em;
 	}
 
 		.box > :last-child {
@@ -633,7 +641,11 @@ input, select, textarea {
 		}
 
 		.box.style2 {
-			padding: 3.5em 2.5em 3.5em 2.5em;
+        background: white;
+		color: #21282c;
+        border-radius: 45px;
+        border: 3px solid  #24FFF2 ;
+        padding: 1.3em 2.25em 2.25em 2.5em;
 		}
 
 		@media screen and (max-width: 736px) {
@@ -859,7 +871,7 @@ input, select, textarea {
 		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		color: #39454b;
+		color: #2d373c;
 		display: block;
 		width: 100%;
 		padding: 0.65em 0.75em;
@@ -878,7 +890,7 @@ input, select, textarea {
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #9ac8e9;
+			border-color: #83F0FF;
 		}
 
 	input[type="text"],
@@ -895,23 +907,23 @@ input, select, textarea {
 		min-height: 8em;
 	}
 
-	::-moz-focus-inner {
+	moz-focus-inner {
 		border: 0;
 	}
 
-	::-webkit-input-placeholder {
+	webkit-input {
+		opacity: 0.175;
+	}
+
+	moz-placeholder {
 		opacity: 0.375;
 	}
 
-	:-moz-placeholder {
+	moz-placeholder {
 		opacity: 0.375;
 	}
 
-	::-moz-placeholder {
-		opacity: 0.375;
-	}
-
-	:-ms-input-placeholder {
+	ms-input-placeholder {
 		opacity: 0.375;
 	}
 
@@ -939,9 +951,6 @@ input, select, textarea {
 			line-height: inherit;
             color: royalblue;
 		}
-         .icon:before { 
-            text-shadow: 2px 4px 6px seashell; 
-        } 
 
 		.icon > .label {
 			display: none;
@@ -956,6 +965,16 @@ input, select, textarea {
 		}
 
 /* Image */
+
+.responsive{
+     max-width: 100%;
+     max-height: 100%;
+}
+.responsivepic{
+     max-width: 70%;
+     max-height: 100%;
+}
+
 
 	.image {
 		position: relative;
@@ -973,9 +992,9 @@ input, select, textarea {
 
 		.image img {
 			display: block;
-     padding:2px;
-   border:3px solid #021a40;
-   background-color:whitesmoke;
+            padding:2px;
+            border:3px solid #021a40;
+            background-color:whitesmoke;
 			width: 100%;
 		}
 
@@ -992,7 +1011,7 @@ input, select, textarea {
 
 		.image.left {
 			float: left;
-			margin: 0 2em 2em 0;
+			margin: -0.25em 1.2em 1.2em 0.25em;
 		}
 
 		.image.centered {
@@ -1422,6 +1441,7 @@ input, select, textarea {
 
 		}
 
+
 /* Gallery */
 
 	.gallery {
@@ -1452,9 +1472,10 @@ input, select, textarea {
 			opacity: 1.0;
 		}
 
-			.gallery article .image {
+			.gallery article .image:hover {
 				margin: 0;
 				display: block;
+                opacity: 0.85;
 			}
 
 			.gallery article:nth-last-child(1n) {
@@ -1839,10 +1860,10 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		background: rgba(44, 238, 252, 0.9);
-		height: 2.45em;
-		line-height: 3em;
+		height: 2.50em;
+		line-height: 1em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
-        font-size: 1.25em;
+        font-size: 1.28em;
 
 	}
 
@@ -1864,7 +1885,7 @@ input, select, textarea {
 			right: 0.5em;
 			top: 0;
 			height: 1em;
-			line-height: 1em;
+			line-height: 2em;
 		}
 
 			#header nav ul {
@@ -1881,17 +1902,30 @@ input, select, textarea {
 						display: block;
 						color: inherit;
 						text-decoration: none;
-						height: 3em;
-						line-height: 3em;
+						height: 2.5em;
+						line-height: 2.5em;
 						padding: 0 0.5em 0 0.5em;
 						outline: 0;
 					}
-
-		@media screen and (max-width: 736px) {
-
+                @media screen and (max-width: 500px){
+                    #header nav ul li {
+                        display: inline-block;
+                         margin-left: 0.12em;
+                        font-size: 0.74em;
+                        }
+               
+                @media screen and (max-width: 365px){
+                    #header nav ul li {
+                        display: inline-block;
+                         margin-left: 0.1em;
+                        font-size: 0.62em;
+                        }    
+                    }
+                        
 			#header {
 				height: 2.5em;
 				line-height: 2.5em;
+                font-size: 1.12em;
 			}
 
 				#header h1 {
@@ -1908,7 +1942,7 @@ input, select, textarea {
 					}
 
 				#header nav {
-					display: none;
+					display: inherit;
 				}
 
 		}
@@ -2208,7 +2242,7 @@ input, select, textarea {
 
 			#footer ul.menu li {
 				border-left-color: rgba(185, 186, 187, 0.2);
-				font-size: 0.9em;
+				font-size: 1.0em;
 			}
 
 		@media screen and (max-width: 1000px) {
@@ -2222,9 +2256,9 @@ input, select, textarea {
 				-webkit-justify-content: center;
 				-ms-justify-content: center;
 				justify-content: center;
-				line-height: 1.5em;
+				line-height: 1.0em;
 				text-align: center;
-				padding: 2em 1em 2em 1em;
+				padding: 1 1em 1em 1em;
 			}
 
 				#footer > * {
@@ -2238,7 +2272,7 @@ input, select, textarea {
 			#footer ul.menu li {
 				border-left: none;
 				display: block;
-				line-height: inherit;
+				line-height: 0.5;
 				margin: 0.25em 0 0 0;
 				padding: 0.25em 0 0 0;
 			}
@@ -2253,7 +2287,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/"), url("../../images/intro.jpg");
+		background: url("images/"), url("../../images/backgrounds/intro.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2263,7 +2297,7 @@ input, select, textarea {
 /* One */
 
 	#one {
-		background: url("images/"), url("../../images/one.jpg");
+		background: url("/images/"), url("/images/backgrounds/Forest.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2272,7 +2306,7 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/"), url("../../images/two.jpg");
+		background: url("/images/"), url("/images/backgrounds/Forest.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
