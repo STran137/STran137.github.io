@@ -1963,11 +1963,11 @@ input, select, textarea {
         left: 0;
         top: 0;
         width: 100%;
-        background: linear-gradient(-45deg, #25b8ee, #40e2bc);
+        background: linear-gradient(-45deg, #40e2bc,  #25b8ee);
         height: 2.50em;
         line-height: 1em;
         box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
-        font-size: 1.28em;
+        font-size: 1.30em;
 
     }
 
