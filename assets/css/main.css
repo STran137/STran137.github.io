@@ -1076,11 +1076,6 @@ input, select, textarea {
      max-width: 70%;
      max-height: 100%;
 }
-.responsiveproj{
-	max-width: 80%;
-	max-height: 80%;
-}
-
 
 	.image {
 		position: relative;
@@ -1099,8 +1094,8 @@ input, select, textarea {
 		.image img {
 			display: block;
             padding:2px;
-            border:3px solid #021a40;
-            background-color:whitesmoke;
+            border:3px solid #00b7ff;
+            background-color:rgb(255, 255, 255);
 			width: 100%;
 		}
 
@@ -1581,7 +1576,7 @@ input, select, textarea {
 			.gallery article .image:hover {
 				margin: 0;
 				display: block;
-                opacity: 0.85;
+                opacity: 0.80;
 			}
 
 			.gallery article:nth-last-child(1n) {
@@ -1965,7 +1960,7 @@ input, select, textarea {
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: linear-gradient(-45deg, #25b8ee, #40e2bc);
+		background: linear-gradient(-45deg, #40e2bc, #25b8ee);
 		height: 2.50em;
 		line-height: 1em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
